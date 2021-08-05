@@ -24,4 +24,9 @@ public class UserServiceImpl implements UserService {
     public List<User> getUserList() {
         return userMapper.selectList(Wrappers.lambdaQuery());
     }
+
+    @Override
+    public User selectById(Long id) {
+        return userMapper.selectById(id);
+    }
 }

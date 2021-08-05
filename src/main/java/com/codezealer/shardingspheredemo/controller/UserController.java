@@ -18,6 +18,11 @@ public class UserController {
         return userService.getUserList();
     }
 
+    @GetMapping("/select/{id}")
+    public User selectById(@PathVariable("id") Long id) {
+        return userService.selectById(id);
+    }
+
     @PostMapping("/insert")
     public Boolean insert(@RequestBody User user) {
         return userService.save(user);

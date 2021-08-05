@@ -22,4 +22,5 @@ public interface UserService {
      */
     List<User> getUserList();
 
+    User selectById(Long id);
 }
